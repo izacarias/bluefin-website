@@ -10,6 +10,7 @@ import {
 } from '@iconify-prerendered/vue-mdi'
 
 import { marked } from 'marked'
+import { load as loadYaml } from 'js-yaml'
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {
@@ -338,30 +339,7 @@ async function loadVersions() {
   try {
     const response = await fetch('/stream-versions.yml')
     const yamlText = await response.text()
-
-    // Simple YAML parser for our specific format
-    const parseYAML = (yaml: string): StreamVersions => {
-      const lines = yaml
-        .split('\n')
-        .filter(line => line.trim() && !line.trim().startsWith('#'))
-      const result: any = {}
-      let currentStream = ''
-
-      for (const line of lines) {
-        if (!line.startsWith(' ') && line.includes(':')) {
-          currentStream = line.split(':')[0].trim()
-          result[currentStream] = {}
-        }
-        else if (line.startsWith('  ') && line.includes(':')) {
-          const [key, value] = line.trim().split(': ')
-          result[currentStream][key] = value.replace(/"/g, '')
-        }
-      }
-
-      return result as StreamVersions
-    }
-
-    streamVersions.value = parseYAML(yamlText)
+    streamVersions.value = loadYaml(yamlText) as StreamVersions
   }
   catch (error) {
     console.warn('Failed to load stream versions:', error)
