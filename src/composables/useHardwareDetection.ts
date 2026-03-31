@@ -89,7 +89,9 @@ async function detectArch(): Promise<Arch> {
         return 'arm64'
       }
       if (arch === 'x86' || arch === 'x86_64' || arch === 'amd64') {
-        return 'x86_64'
+        // On Windows ARM with an x86-emulated browser, Client Hints reports 'x86'
+        // because that is the browser's compiled target, not the hardware arch.
+        // Fall through to UA string check for any secondary ARM signals.
       }
     }
     catch {
@@ -97,6 +99,13 @@ async function detectArch(): Promise<Arch> {
     }
   }
   const ua = navigator.userAgent
+  // Check for ARM markers in the UA string.
+  // - Linux/Android: 'aarch64' or 'arm64' are standard
+  // - Windows ARM with native ARM64 browser: UA includes 'ARM64' as a platform token
+  //   e.g. "Mozilla/5.0 (Windows NT 10.0; Win64; ARM64) AppleWebKit/..."
+  //   The /arm64/i match covers this case (case-insensitive).
+  // - Firefox on Windows ARM: reports 'x86_64' with no ARM marker (Bugzilla #1763310)
+  //   This case cannot be detected from browser APIs alone.
   if (/aarch64|arm64/i.test(ua)) {
     return 'arm64'
   }

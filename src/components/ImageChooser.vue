@@ -783,6 +783,9 @@ onMounted(() => {
             <li class="preflight-item preflight-item--windows">
               {{ t('TryBluefin.Preflight.FastStartup') }}
             </li>
+            <li class="preflight-item preflight-item--windows">
+              {{ t('TryBluefin.Preflight.WindowsArm') }}
+            </li>
           </template>
           <!-- Always shown -->
           <li class="preflight-item">

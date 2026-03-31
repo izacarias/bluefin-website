@@ -175,6 +175,7 @@
       "Title": "Before you install",
       "Bitlocker": "Find your BitLocker recovery key before repartitioning (Windows 11+)",
       "FastStartup": "Disable Fast Startup in Windows Power Settings before dual-booting",
+      "WindowsArm": "On Windows ARM hardware (Snapdragon X, Surface Pro X, etc.), verify the architecture shown above matches your device — some browsers cannot detect ARM automatically",
       "SecureBoot": "Bluefin supports Secure Boot — no BIOS change needed for most hardware",
       "MediaWriter": "Use Fedora Media Writer to create your install USB — Ventoy is unsupported"
     },
