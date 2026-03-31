@@ -77,7 +77,7 @@
     "Tag": "Run your favorite",
     "Title": "Applications",
     "Description": "Bluefin utilizes the <a href=\"https://github.com/kolunmi/bazaar\" target=\"_blank\">Bazaar</a> app store, allowing for easy installation and management of all your favorite applications from <a href=\"https://flathub.org\" target=\"_blank\">Flathub</a> and a curated list of apps we think you'll love.",
-    "Additional": "Additionally, Bluefin provides <a href=\"https://docs.brew.sh/Homebrew-on-Linux\" target=\"_blank\">Homebrew</a> and application container workflows, making running any piece of software a breeze. <br><br><strong>Bluefin is developed on Bluefin.</strong>",
+    "Additional": "Additionally, Bluefin provides <a href=\"https://docs.brew.sh/Homebrew-on-Linux\" target=\"_blank\">Homebrew</a> and application container workflows, making running any piece of software a breeze. Since the entire software world comes in containers, using them becomes quick and efficient! <br><br><strong>Bluefin is developed on Bluefin.</strong>",
     "FlathubButton": "View apps on Flathub"
   },
   "TryBluefin": {
