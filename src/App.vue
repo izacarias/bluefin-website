@@ -16,62 +16,33 @@ import SectionPicker from './components/sections/SectionPicker.vue'
 import SectionVideo from './components/sections/SectionVideo.vue'
 import TopNavbar from './components/TopNavbar.vue'
 
-import { IS_TABLET } from './composables'
-
 import { i18n } from './locales/schema'
 
 const visibleSection = ref<string>('')
 provide('visibleSection', visibleSection)
 
-const imageLinks = [
-  // Characters
+// Preload only above-fold character images (critical for LCP).
+// Parallax layers (evening/*.webp, mobile-parallax.webp) are decorative and
+// loaded by the CSS/parallax layer — do not block initial paint on them.
+const characterImages = [
   './characters/angry.webp',
   './characters/bluefin-small.webp',
   './characters/devs.webp',
   './characters/nest.webp'
 ]
 
-// If the initial size is not tablet, load these too
-if (!IS_TABLET.value) {
-  imageLinks.push(
-    // The goldern hour / evening scenes
-    './evening/BlueFinSite_1_Sky-min.webp',
-    './evening/BlueFinSite_2_Clouds-min.webp',
-    './evening/BlueFinSite_2_Sun-min.webp',
-    './evening/BlueFinSite_3_Clouds-min.webp',
-    './evening/BlueFinSite_4_Mountains-min.webp',
-    './evening/BlueFinSite_5_FogA-min.webp',
-    './evening/BlueFinSite_6_BackgroundA-min.webp',
-    './evening/BlueFinSite_7_FogB-min.webp',
-    './evening/BlueFinSite_8_BackgroundB-min.webp',
-    './evening/BlueFinSite_9_MidGroundA-min.webp',
-    './evening/BlueFinSite_10_MidgroundB-min.webp',
-    './evening/BlueFinSite_11_MidGroundC-min.webp',
-    './evening/BlueFinSite_12_ForeGroundA-min.webp',
-    './evening/BlueFinSite_13_ForegroundB-min.webp',
-    './evening/BlueFinSite_14_ForegroundC-min.webp'
-  )
-}
-else {
-  imageLinks.push('./mobile-parallax.webp')
-}
-
 const isLoading = ref(true)
 onBeforeMount(() => {
   Promise.all(
-    imageLinks.map((link) => {
-      // Iterate over all links. Create an HTMLImageElement and assign
-      // the provided link to it. This returns a promise, which is only
-      // resolved after image is loaded. Once all images are loaded, the
-      // loading is set to false and page can be loaded.
+    characterImages.map((link) => {
       return new Promise((resolve) => {
         const img = new Image()
         img.src = link
         img.onload = resolve
+        img.onerror = resolve // don't block if an image fails to load
       })
     })
   ).finally(() => {
-    // Adding timeout gives us a moment to also render the images
     setTimeout(() => {
       isLoading.value = false
     }, 100)
