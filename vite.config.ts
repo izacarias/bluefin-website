@@ -15,6 +15,13 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         testing: resolve(__dirname, 'public/testing.html')
+      },
+      output: {
+        manualChunks: {
+          'vue-vendor': ['vue', 'vue-i18n'],
+          'ui-icons': ['@iconify-prerendered/vue-mdi'],
+          'utils': ['marked', 'js-yaml', '@vueuse/core', '@vueuse/components'],
+        }
       }
     }
   },

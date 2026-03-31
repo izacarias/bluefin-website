@@ -1,5 +1,7 @@
 import { createI18n } from 'vue-i18n'
 
+// All locales are bundled eagerly. To code-split them into per-locale chunks,
+// this would need to be changed to lazy loading with async i18n initialization.
 const modules = import.meta.glob('./*.json', { eager: true })
 
 const messages = Object.fromEntries(
