@@ -150,6 +150,29 @@
         "NvidiaDesc": "Nvidia RTX/GTX 16xx+ Series, GTX 10xx Series and below are unsupported"
       }
     },
+    "Detection": {
+      "Button": "Detect my hardware",
+      "Detecting": "Detecting...",
+      "NvidiaDetected": "NVIDIA GPU detected",
+      "AmdIntelDetected": "AMD / Intel GPU detected",
+      "Detected": "Detected",
+      "PrivacyBlocked": "GPU detection is blocked by your privacy settings. Select manually below.",
+      "VmWarning": "You appear to be in a virtual machine — results may not reflect physical hardware.",
+      "HybridNote": "On laptops with dual graphics (NVIDIA Optimus), we may detect the integrated GPU. If you know you have NVIDIA, select it manually.",
+      "MacIntelMessage": "Bluefin does not support macOS on Intel Macs.",
+      "MacIntelRecommendation": "We recommend Ubuntu for Intel Mac users.",
+      "MacIntelButton": "Download Ubuntu",
+      "MacArmMessage": "Bluefin does not support Apple Silicon (ARM) Macs.",
+      "MacContinue": "Continue anyway",
+      "ArmWarning": "Bluefin targets x86_64. ARM support is not available."
+    },
+    "Preflight": {
+      "Title": "Before you install",
+      "Bitlocker": "Find your BitLocker recovery key before repartitioning (Windows 11+)",
+      "FastStartup": "Disable Fast Startup in Windows Power Settings before dual-booting",
+      "SecureBoot": "Bluefin supports Secure Boot — no BIOS change needed for most hardware",
+      "MediaWriter": "Use Fedora Media Writer to create your install USB — Ventoy is unsupported"
+    },
     "Download": {
       "IsoDescription": "Installation ISO",
       "IsoDownload": "Download the ISO",
