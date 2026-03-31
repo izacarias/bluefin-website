@@ -25,7 +25,7 @@
       border-bottom: none;
     }
 
-    &>div {
+    & > div {
       @include mixins.flex(20px);
       margin-bottom: 20px;
     }

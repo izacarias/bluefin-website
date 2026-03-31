@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { MessageSchema } from '../locales/schema'
 import { useI18n } from 'vue-i18n'
+
 const { t } = useI18n<MessageSchema>({
   useScope: 'global'
 })
@@ -8,28 +9,28 @@ const { t } = useI18n<MessageSchema>({
 // Left side navigation
 const leftNavLinks = [
   {
-    name: t("TopBar.Docs"),
+    name: t('TopBar.Docs'),
     href: 'https://docs.projectbluefin.io/introduction'
   },
-  { name: t("TopBar.AskBluefin"), href: 'https://ask.projectbluefin.io', external: true }
+  { name: t('TopBar.AskBluefin'), href: 'https://ask.projectbluefin.io', external: true }
 ]
 
 // Right side navigation
 const rightNavLinks = [
-  { name: t("TopBar.Blog"), href: 'https://docs.projectbluefin.io/blog' },
-  { name: t("TopBar.Changelog"), href: 'https://docs.projectbluefin.io/changelogs' },
+  { name: t('TopBar.Blog'), href: 'https://docs.projectbluefin.io/blog' },
+  { name: t('TopBar.Changelog'), href: 'https://docs.projectbluefin.io/changelogs' },
   {
-    name: t("TopBar.Discussions"),
+    name: t('TopBar.Discussions'),
     href: 'https://github.com/ublue-os/bluefin/discussions',
     external: true
   },
   {
-    name: t("TopBar.Feedback"),
+    name: t('TopBar.Feedback'),
     href: 'https://feedback.projectbluefin.io/',
     external: true
   },
   {
-    name: t("TopBar.Store"),
+    name: t('TopBar.Store'),
     href: 'https://store.projectbluefin.io',
     external: true
   }

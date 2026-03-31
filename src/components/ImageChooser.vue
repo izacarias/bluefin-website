@@ -9,8 +9,8 @@ import {
   IconGithubCircle
 } from '@iconify-prerendered/vue-mdi'
 
-import { marked } from 'marked'
 import { load as loadYaml } from 'js-yaml'
+import { marked } from 'marked'
 import { computed, onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import {

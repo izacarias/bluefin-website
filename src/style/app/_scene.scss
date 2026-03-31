@@ -7,7 +7,7 @@
   position: relative;
   padding-bottom: 128px;
 
-  &>div {
+  & > div {
     display: block;
     height: 100vh;
     border-bottom: 1px solid var(--color-border);
@@ -15,11 +15,10 @@
 }
 
 .scene-content {
-
   // Initial state
   strong,
   h2,
-  &>div>div {
+  & > div > div {
     transform: translateY(150%);
   }
 
@@ -42,12 +41,12 @@
       animation: slide 0.7s normal 0.1s forwards cubic-bezier(0.76, 0, 0.24, 1);
     }
 
-    &>div>div {
+    & > div > div {
       animation: slide 0.7s normal 0.2s forwards cubic-bezier(0.76, 0, 0.24, 1);
     }
   }
 
-  &>div {
+  & > div {
     overflow: hidden;
   }
 

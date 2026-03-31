@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import type { MessageSchema } from './../locales/schema'
-import { useI18n } from 'vue-i18n'
 import { onMounted, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const props = defineProps<{
+  feedUrl: string
+  perPage?: number
+}>()
 
 const { t } = useI18n<MessageSchema>({
   useScope: 'global'
@@ -26,11 +31,6 @@ interface BlogPost {
   pubDate: string
   formattedDate: string
 }
-
-const props = defineProps<{
-  feedUrl: string
-  perPage?: number
-}>()
 
 const posts = ref<BlogPost[]>([])
 const loading = ref(true)

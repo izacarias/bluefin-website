@@ -108,8 +108,8 @@ const { t } = useI18n<MessageSchema>({
       <div>
         <strong class="footer-title">{{ t("Footer.Project.Title") }}</strong>
         <p class="ublue">
-          <a href='https://universal-blue.org' target='_blank' rel='noopener noreferrer'>
-            <img src='/brands/universal-blue.svg' alt='Universal Blue Logo'/>
+          <a href="https://universal-blue.org" target="_blank" rel="noopener noreferrer">
+            <img src="/brands/universal-blue.svg" alt="Universal Blue Logo">
             <span>
               Universal Blue
             </span>
@@ -127,12 +127,12 @@ const { t } = useI18n<MessageSchema>({
         <hr>
         <p v-html="marked.parse(t('Footer.Credits.Intro'))" />
         <ul>
-          <li v-html="marked.parse(t('Footer.Credits.Website'))"/>
-          <li v-html="marked.parse(t('Footer.Credits.Logos'))"/>
-          <li v-html="marked.parse(t('Footer.Credits.ImageEdit'))"/>
-          <li v-html="marked.parse(t('Footer.Credits.Wallpapers'))"/>
-          <li v-html="marked.parse(t('Footer.Credits.Translations'))"/>
-          <li v-html="marked.parse(t('Footer.Credits.Thanks'))"/>
+          <li v-html="marked.parse(t('Footer.Credits.Website'))" />
+          <li v-html="marked.parse(t('Footer.Credits.Logos'))" />
+          <li v-html="marked.parse(t('Footer.Credits.ImageEdit'))" />
+          <li v-html="marked.parse(t('Footer.Credits.Wallpapers'))" />
+          <li v-html="marked.parse(t('Footer.Credits.Translations'))" />
+          <li v-html="marked.parse(t('Footer.Credits.Thanks'))" />
         </ul>
 
         <div style="flex: 1" />
@@ -143,22 +143,24 @@ const { t } = useI18n<MessageSchema>({
     </div>
   </footer>
 </template>
+
 <style scoped>
   .ublue {
-    margin-bottom: 10px;
-  }
+  margin-bottom: 10px;
+}
 
-  .ublue img {
-    height:2em;
-  }
-  .ublue a {
-    display:inline-flex; align-items:center;
-  }
-  .ublue span{
-    margin-left:4px;
-  }
+.ublue img {
+  height: 2em;
+}
+.ublue a {
+  display: inline-flex;
+  align-items: center;
+}
+.ublue span {
+  margin-left: 4px;
+}
 
-  .footer-links {
-    margin-top: 20px;
-  }
+.footer-links {
+  margin-top: 20px;
+}
 </style>

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import type { MessageSchema } from '../../locales/schema'
+import { marked } from 'marked'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { LangMissionBluefinImageURL } from '../../content'
-import { marked } from 'marked'
 
 import SceneContent from '../common/SceneContent.vue'
 import SceneQuote from '../common/SceneQuote.vue'
@@ -21,11 +21,11 @@ const { t } = useI18n<MessageSchema>({
 
     <div class="container">
       <SceneContent
-          tag="Mission.Tag"
-          title="Mission.Title"
-          text="Mission.Text.NewBreed"
-          @visible="vis = true"
-        >
+        tag="Mission.Tag"
+        title="Mission.Title"
+        text="Mission.Text.NewBreed"
+        @visible="vis = true"
+      >
         <p
           v-html="marked.parse(t('Mission.Text.Change'))"
         />
