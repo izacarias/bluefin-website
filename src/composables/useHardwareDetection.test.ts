@@ -8,6 +8,7 @@ describe('classifyGPU — nvidia (RTX gate: open driver supported)', () => {
 
   it('GTX 16xx card → nvidia', () => {
     expect(classifyGPU('NVIDIA GeForce GTX 1660')).toBe('nvidia')
+    expect(classifyGPU('NVIDIA GeForce GTX1660')).toBe('nvidia')
   })
 
   it('ANGLE renderer with RTX → nvidia', () => {

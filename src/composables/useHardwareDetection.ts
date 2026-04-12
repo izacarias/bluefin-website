@@ -109,7 +109,7 @@ async function detectArch(): Promise<Arch> {
 
 export function classifyGPU(renderer: string): GPUClass {
   if (/NVIDIA/i.test(renderer)) {
-    if (/RTX/i.test(renderer) || /GTX 16\d{2}/i.test(renderer)) {
+    if (/RTX/i.test(renderer) || /GTX\s*16\d{2}/i.test(renderer)) {
       return 'nvidia' // RTX or GTX 16xx: supported by nvidia-open
     }
     return 'nvidia-legacy' // everything else: not supported
