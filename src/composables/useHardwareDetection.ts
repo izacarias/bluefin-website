@@ -2,7 +2,7 @@
 
 export type OS = 'windows' | 'linux' | 'mac' | 'unknown'
 export type Arch = 'x86_64' | 'arm64'
-export type GPUClass = 'nvidia' | 'nvidia-legacy' | 'nvidia-nouveau' | 'amd' | 'intel' | 'other'
+export type GPUClass = 'nvidia' | 'nvidia-legacy' | 'amd' | 'intel' | 'other'
 export type DetectionState = 'idle' | 'detecting' | 'done'
 
 export interface GPUResult {
@@ -108,14 +108,11 @@ async function detectArch(): Promise<Arch> {
 }
 
 export function classifyGPU(renderer: string): GPUClass {
-  if (/^NV[0-9A-F]{2,3}$/i.test(renderer.trim())) {
-    return 'nvidia-nouveau'
-  }
-  if (/NVIDIA/i.test(renderer) && (/RTX/i.test(renderer) || /GTX 16\d{2}/i.test(renderer))) {
-    return 'nvidia' // Turing+ (RTX series + GTX 1650/1660): supported by nvidia-open
-  }
   if (/NVIDIA/i.test(renderer)) {
-    return 'nvidia-legacy' // Pre-Turing (GTX 10xx and older): not supported by nvidia-open
+    if (/RTX/i.test(renderer) || /GTX 16\d{2}/i.test(renderer)) {
+      return 'nvidia' // RTX or GTX 16xx: supported by nvidia-open
+    }
+    return 'nvidia-legacy' // everything else: not supported
   }
   if (/AMD|Radeon/i.test(renderer)) {
     return 'amd'
