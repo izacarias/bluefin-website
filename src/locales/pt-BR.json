@@ -20,7 +20,7 @@
     "Box1": "Programas via Flathub",
     "Box2": "Manutenção quase-zero",
     "Box3": "Drivers de GPU inclusos",
-    "Features": "Com atualizações automáticas aplicadas via imagem e uma loja de aplicativos gráfica e simples, Bluefin foi foi criada para manter você fazendo o que interessa. Faça o que precisa, sem sacrificar a estabilidade do sistema. O desktop Linux evoluiu, um novo começo para uma nova geração. Confira [o post de anúncio](https://www.ypsidanger.com/announcing-project-bluefin/) e a [documentação introdutória](https://docs.projectbluefin.io) para mais informações",
+    "Features": "Com atualizações automáticas aplicadas via imagem e uma loja de aplicativos gráfica e simples, Bluefin foi criada para manter você fazendo o que interessa. Faça o que precisa, sem sacrificar a estabilidade do sistema. O desktop Linux evoluiu, um novo começo para uma nova geração. Confira [o post de anúncio](https://www.ypsidanger.com/announcing-project-bluefin/) e a [documentação introdutória](https://docs.projectbluefin.io) para mais informações",
     "BluefinArtworkAlt": "Bluefin olhando para o futuro do Linux - aparentemente para a esquerda"
   },
   "EvolutionQuote": {
@@ -39,7 +39,7 @@
     "BoxFive": "Podman Desktop para gerenciamento gráfico de contêineres",
     "BoxSix": "IDEs JetBrains com um comando",
     "RuntimeContainers": "Um [runtime para contêineres](https://podman.io/) está incluso para destravar o potencial da sua equipe. Use as mesmas ferramentas que sustentam a infraestrutura moderna da internet no seu desktop. Bluefin sabe como enviar para produção.",
-    "CNJourney": "Nosso público são operadores Linux que não usam Linux no desktop porque ele não os atende. Portanto, estamos conduzindo o desktop Linux por sua jornada rumo à computação em nuvem nativa e construindo-o como uma comunidade.",
+    "CNJourney": "Nosso público-alvo são operadores Linux que não usam Linux no desktop porque ele não os atende. Portanto, estamos conduzindo o desktop Linux por sua jornada rumo à computação em nuvem nativa e construindo-o como uma comunidade.",
     "KarlArtworkAlt": "Karl pairando sobre o Backlog",
     "TowerJoke": "<b>Domine</b> seu Backlog!"
   },
@@ -147,7 +147,7 @@
       "Gpu": {
         "Title": "Placa de Vídeo (GPU)",
         "AMDIntelDesc": "AMD ou Intel",
-        "NvidiaDesc": "Nvidia RTX ou GTX 16xx+ Series. GTX 10xx Series e abaixo não são suportados"
+        "NvidiaDesc": "Nvidia RTX ou GTX 16xx+ Series. GTX 10xx Series e anteriores não são suportados"
       }
     },
     "Download": {
@@ -196,14 +196,14 @@
     "PoweredBy": "Feito com",
     "Project": {
       "Title": "Project Bluefin é feito com",
-      "Ublue": "Um conjunto de ferramentas comunitárias projetado para reinventar o ambiente de trabalho Linux. Criado por amor aos jogos. Bem-vindo ao mundo indie Cloud Native."
+      "Ublue": "Um conjunto de ferramentas comunitárias projetado para reinventar o ambiente de trabalho Linux. Criado por amor à causa. Bem-vindo ao mundo indie Cloud Native."
     },
     "Credits": {
       "Intro": "Toda a arte foi feita por humanos.",
       "Website": "Website - [Jan Dolanský](https://dolansky.dev/) & [Kyle Gospodnetich](https://kylegospodneti.ch/)",
       "Logos": "Logos e Wallpapers - [Jacob Schnurr](https://www.etsy.com/shop/JSchnurrCommissions?listing_id=1425657775)",
       "ImageEdit": "Edição de Imagem - [Chandeleer](https://ko-fi.com/chandeleer) & [Delphic Melody](https://github.com/delphicmelody/)",
-      "Wallpapers": "Papel de parede ilustrativo Bluefin - Andy Frazer[DragonsofWales](https://www.etsy.com/fi-en/shop/DragonsofWales?ref=profile_header)",
+      "Wallpapers": "Papel de parede ilustrativo Bluefin - Andy Frazer, [DragonsofWales](https://www.etsy.com/fi-en/shop/DragonsofWales?ref=profile_header)",
       "Translations": "Traduções - [Tulip Blossom](https://github.com/tulilirockz), [karhima](https://github.com/karhima), [Niklas](https://niklas.tech), [Crono](https://github.com/EPOCHvoyager), [Tsu-gu](https://github.com/Tsu-gu) & [Mimolet](https://github.com/theMimolet)",
       "Thanks": "Agradecimentos especiais - [Aaron Lake](https://www.linkedin.com/in/aaron-lake/), [Brian Ketelsen](https://brian.dev/), [Dustin Kirkland](https://www.kotterva.com/), [Wayne Witzel](https://github.com/wwitzel3), & [Marco Ceppi](https://github.com/marcoceppi)"
     },
