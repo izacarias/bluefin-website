@@ -77,7 +77,7 @@
     "Tag": "Execute suas",
     "Title": "Aplicações favoritas",
     "Description": "Bluefin utiliza a loja de aplicativos <a href=\"https://github.com/kolunmi/bazaar\" target=\"_blank\">Bazaar</a>, permitindo a instalação e gerenciamento fáceis de todos os seus aplicativos favoritos do <a href=\"https://flathub.org\" target=\"_blank\">Flathub</a> e uma lista curada de aplicativos que achamos que você vai adorar.",
-    "Additional": "Além disso, a Bluefin vem com o <a href=\"https://docs.brew.sh/Homebrew-on-Linux\">Homebrew</a> e fluxos de trabalho predefinidos com aplicativos em contêineres, tornando a execução de qualquer software uma tarefa simples. Como todo o mundo do software vem em contêineres, usá-los se torna rápido e eficiente! <br><br><strong>Bluefin é desenvolvido na Bluefin.</strong>",
+    "Additional": "Além disso, a Bluefin vem com o <a href=\"https://docs.brew.sh/Homebrew-on-Linux\" target=\"_blank\">Homebrew</a> e fluxos de trabalho predefinidos com aplicativos em contêineres, tornando a execução de qualquer software uma tarefa simples. Como todo o mundo do software vem em contêineres, usá-los se torna rápido e eficiente! <br><br><strong>Bluefin é desenvolvido na Bluefin.</strong>",
     "FlathubButton": "Veja os aplicativos no Flathub"
   },
   "TryBluefin": {
